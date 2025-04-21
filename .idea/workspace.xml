@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f804402-d642-46d5-b75e-3b5abc63a63e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/newgenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_doc_dataset/build_dataset.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_doc_dataset/convert_scripts_to_csv.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_doc_dataset/data/scripts_dataset.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_doc_dataset/repos/awesome-python-projects" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_doc_dataset/repos/discord.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_doc_dataset/repos/flask" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/function_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/function_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/function_3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/sample_code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
