@@ -1,54 +1,41 @@
 import os
 
-# === Read full script ===
-def read_full_script(file_path):
-    """Reads the entire contents of a Python file."""
-    if not os.path.isfile(file_path):
-        print(f"[Error] File not found: {file_path}")
-        return ""
+def save_to_markdown(documentation, model_name, source_file, output_dir="docs"):
+    """
+    Saves the generated documentation to a markdown file.
 
-    try:
-        with open(file_path, 'r') as f:
-            return f.read()
-    except Exception as e:
-        print(f"[Error] Couldn't read the file: {e}")
-        return ""
-
-# === Save to Markdown ===
-def save_to_markdown(code, documentation, prompt, output_dir="docs", file_index=1):
-    """Saves the code, documentation, and prompt to a Markdown file."""
+    Args:
+        documentation (str): The LLM-generated documentation.
+        model_name (str): Name of the model used to generate the doc.
+        source_file (str): Name of the original .py file.
+        output_dir (str): Output folder for markdown files.
+    """
     os.makedirs(output_dir, exist_ok=True)
 
-    filename = f"script_{file_index}.md"
-    filepath = os.path.join(output_dir, filename)
+    # Generate output file name
+    base_name = os.path.splitext(source_file)[0]
+    filename = f"{base_name}_{model_name}.md"
+    output_path = os.path.join(output_dir, filename)
 
-    with open(filepath, "w") as f:
-        f.write(f"# Script Documentation ({filename})\n\n")
+    # Write just the documentation
+    with open(output_path, "w") as f:
+        f.write(f"# Documentation for `{source_file}` using `{model_name}`\n\n")
+        f.write(documentation.strip())
 
-        f.write("## Original Code\n")
-        f.write("```python\n")
-        f.write(code)
-        f.write("\n```\n\n")
-
-        f.write("## Generated Documentation\n")
-        f.write(documentation)
-        f.write("\n\n")
-
-        f.write("## Prompt Used\n")
-        f.write("```\n")
-        f.write(prompt)
-        f.write("\n```")
-
-    print(f"✅ Saved to {filepath}")
-
+    print(f"✅ Saved to {output_path}")
 def read_full_script(file_path):
-    if not os.path.isfile(file_path):
-        print(f"[Error] File not found: {file_path}")
-        return ""
+    """
+    Reads and returns the full content of a Python file.
 
+    Args:
+        file_path (str): The path to the .py file.
+
+    Returns:
+        str: The contents of the script as a string.
+    """
     try:
-        with open(file_path, 'r') as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             return f.read()
     except Exception as e:
-        print(f"[Error] Couldn't read the file: {e}")
+        print(f"❌ Failed to read {file_path}: {e}")
         return ""

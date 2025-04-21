@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Repos/flask" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/code_doc_dataset/repos/awesome-python-projects" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/code_doc_dataset/repos/discord.py" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/code_doc_dataset/repos/flask" vcs="Git" />
