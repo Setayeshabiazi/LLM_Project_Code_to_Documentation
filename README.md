@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # LLM-Based Code-to-Documentation Generator for Enhanced Code Comprehension
 
 ## Overview
 
-The **LLM-Based Code-to-Documentation Generator** is a web-based tool designed to automate the creation of documentation for Python codebases using large language models (LLMs). This tool is particularly beneficial for legacy projects where documentation is often outdated or missing, significantly reducing the time required for new developers to understand, maintain, and extend existing code.
+The **LLM-Based Code-to-Documentation Generator** is a script-based tool designed to automate the creation of documentation for Python codebases using large language models (LLMs). This tool is particularly beneficial for legacy projects where documentation is often outdated or missing, significantly reducing the time required for new developers to understand, maintain, and extend existing code.
 
 ## Problem Statement
 
@@ -17,7 +16,7 @@ Addressing these issues can greatly improve code maintainability and overall pro
 
 ## Proposed Solution
 
-The tool leverages an LLM to analyze Python code—inferring functionality through variable names, logical patterns, and usage contexts—to generate:
+The tool leverages LLMs to analyze Python code—inferring functionality through variable names, logical patterns, and usage contexts—to generate:
 
 - **Function-level Documentation:** Docstrings and inline comments explaining the purpose and logic of functions.
 - **Module-level Summaries:** High-level overviews of code modules rendered in Markdown or plain text.
@@ -26,35 +25,31 @@ This approach not only speeds up the documentation process but also enhances cla
 
 ## Objectives
 
-- **Web-Based Interface:** Build a user-friendly interface (using Streamlit) that accepts raw Python code and displays side-by-side generated documentation.
 - **Automated Documentation Generation:** Convert code segments into clear, technically accurate documentation.
 - **Enhanced Coverage:** Achieve at least an 80% documentation coverage in legacy codebases with minimal developer input.
 - **Reduced Onboarding Time:** Provide new developers with immediate, AI-generated explanations of code.
 - **Export Capabilities:** Allow users to download the documentation in Markdown (.md) or text (.txt) formats.
+- **Model Comparison:** Benchmark multiple LLMs for documentation quality.
 
 ## Scope
 
 **Included:**
 - Documentation generation for Python code input.
-- LLM-generated outputs such as docstrings, Markdown summaries, and inline comments.
-- A Streamlit-based interface for demo and testing purposes.
+- LLM-generated outputs such as docstrings, Markdown summaries.
 
 **Excluded:**
 - Support for languages beyond Python (e.g., Java, C++).
 - Deep code analysis features like data flow or test generation.
-- Integration into CI/CD pipelines for the MVP.
-
+- Integration into CI/CD pipelines.
 
 ## Dataset Selection & Evaluation
 
 **Dataset Sources:**
-- [discord.py](https://github.com/Rapptz/discord.py) – A Python wrapper for the Discord API
-- [Django](https://github.com/django/django) – A high-level Python web framework
-- [Flask](https://github.com/pallets/flask) – A lightweight Python web application framework
-- [Requests](https://github.com/psf/requests) – A popular Python HTTP library
-- [scikit-learn](https://github.com/scikit-learn/scikit-learn) – A machine learning library for Python
-
-These open-source repositories were downloaded and used to extract various Python scripts for testing the documentation generation tool.
+- [discord.py](https://github.com/Rapptz/discord.py)
+- [Django](https://github.com/django/django)
+- [Flask](https://github.com/pallets/flask)
+- [Requests](https://github.com/psf/requests)
+- [scikit-learn](https://github.com/scikit-learn/scikit-learn)
 
 **Evaluation Criteria:**
 - **Completeness:** Each file or function should receive corresponding documentation.
@@ -64,28 +59,40 @@ These open-source repositories were downloaded and used to extract various Pytho
 
 ## Architecture & Implementation
 
-- **Frontend:** Built with Streamlit for an interactive web experience that accepts code input and displays LLM-generated documentation.
-- **Backend:** Integrates with OpenAI's GPT model to process input code and produce documentation.
-- **Export Options:** Documentation can be downloaded as Markdown (.md) or plain text (.txt) files for seamless integration into project wikis or documentation repositories.
+- **Backend:** Integrates with Ollama's local models to process Python scripts and produce documentation.
+- **Model Comparison:** The script tests four different LLMs:
+  - `qwen2.5-coder:7b`
+  - `codellama:latest`
+  - `codegemma:7b`
+  - `qwen2.5-coder:0.5b`
+- **File Selection:** The tool randomly selects a `.py` file from a set of local repositories and generates documentation.
 
 ## Deliverables
 
-- **Working Web Tool:** An interactive application that accepts Python code snippets or files and displays generated documentation side-by-side.
-- **Evaluation Dataset:** A curated set of Python code samples sourced from well-known repositories for robust testing.
-- **Evaluation Report:** A comparative analysis between human-written and LLM-generated documentation, highlighting time savings and improved clarity.
-- **Export Capability:** Functionality to download the generated documentation for further use.
+- **Working Script:** CLI-based tool that generates documentation from Python code using multiple models.
+- **Evaluation Dataset:** Curated Python scripts for documentation testing.
+- **Evaluation Report:** Analysis comparing human-written and LLM-generated documentation.
+- **Export Capability:** Documentation is saved in the `docs/` folder for further use.
 
 ## Usage
 
-1. **Input Your Code:** Paste your Python code or upload a Python file via the Streamlit interface.
-2. **Generate Documentation:** The LLM will process the code and generate corresponding documentation automatically.
-3. **Review Side-by-Side:** Compare the original code and the AI-generated documentation in the interface.
-4. **Export Documentation:** Download the generated documentation as a `.md` or `.txt` file for inclusion in project docs or wikis.
+1. **Prepare Repositories:**
+   - Clone or download Python repositories you'd like to document.
+   - Place them inside the `Repos/` directory in the root folder.
 
+2. **Run the Tool:**
+   - The script randomly selects one `.py` file from your `Repos/` folder.
+   - It sends the file to each model and collects documentation.
+
+3. **Compare Outputs:**
+   - Documentation is saved in `docs/`, one file per model in Markdown format.
+
+4. **Example Command:**
+   ```bash
+   python new_generator.py
 ## Installation
 
 1. **Clone the Repository:**
-
-   ```bash
+bash
    git clone https://github.com/yourusername/LLM-Code-to-Documentation.git
    cd LLM-Code-to-Documentation
