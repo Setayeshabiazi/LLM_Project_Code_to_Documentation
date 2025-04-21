@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LLM-Based Code-to-Documentation Generator for Enhanced Code Comprehension
 
 ## Overview
@@ -43,14 +44,17 @@ This approach not only speeds up the documentation process but also enhances cla
 - Deep code analysis features like data flow or test generation.
 - Integration into CI/CD pipelines for the MVP.
 
+
 ## Dataset Selection & Evaluation
 
 **Dataset Sources:**
-- [discord.py Repository](https://github.com/Rapptz/discord.py)
-- [Requests Exceptions Module](https://github.com/psf/requests/blob/main/src/requests/exceptions.py)
-- [Awesome Python Projects](https://github.com/garimasingh128/awesome-python-projects)
-- [Django Context Module](https://github.com/django/django/blob/main/django/template/context.py)
-- [Flask Repository](https://github.com/pallets/flask)
+- [discord.py](https://github.com/Rapptz/discord.py) – A Python wrapper for the Discord API
+- [Django](https://github.com/django/django) – A high-level Python web framework
+- [Flask](https://github.com/pallets/flask) – A lightweight Python web application framework
+- [Requests](https://github.com/psf/requests) – A popular Python HTTP library
+- [scikit-learn](https://github.com/scikit-learn/scikit-learn) – A machine learning library for Python
+
+These open-source repositories were downloaded and used to extract various Python scripts for testing the documentation generation tool.
 
 **Evaluation Criteria:**
 - **Completeness:** Each file or function should receive corresponding documentation.
