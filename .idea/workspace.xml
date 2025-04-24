@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f804402-d642-46d5-b75e-3b5abc63a63e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/extract_all_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extract_to_jsonl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generate_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generate_dataset_test_sample.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generate_documentation_qwen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/read_json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +82,7 @@
       <workItem from="1744656773017" duration="11410000" />
       <workItem from="1744744809535" duration="4448000" />
       <workItem from="1745084540860" duration="10790000" />
+      <workItem from="1745425910200" duration="13926000" />
     </task>
     <servers />
   </component>
