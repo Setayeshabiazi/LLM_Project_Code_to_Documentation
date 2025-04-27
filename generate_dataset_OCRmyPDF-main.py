@@ -5,6 +5,7 @@ and save {prompt,response} back into a final JSONL. Auto-installs `requests` if 
 """
 import sys
 import subprocess
+import os
 
 # Ensure `requests` is installed
 try:
@@ -22,9 +23,10 @@ import json
 import time
 
 # ─── CONFIGURATION ──────────────────────────────────────────
-INPUT_JSONL   = "project891_raw.jsonl"
-OUTPUT_JSONL  = "project891_final.jsonl"
-OLLAMA_API    = "http://localhost:11434/api/generate"
+INPUT_JSONL   = "OCRmyPDF-main_raw.jsonl"
+OUTPUT_JSONL  = "OCRmyPDF-main_final.jsonl"
+base = os.getenv("OLLAMA_HOST", "http://127.0.0.1:11434").rstrip('/')
+OLLAMA_API = f"{base}/api/generate"
 MODEL_NAME    = "qwen2.5-coder:7b"
 # ────────────────────────────────────────────────────────────
 

@@ -7,9 +7,9 @@ import ast
 import json
 
 #  ─── CONFIGURATION ──────────────────────────────────────────
-BASE_REPO_PATH = "Repos/Project_891_clean"
-OUTPUT_JSONL    = "project891_raw.jsonl"
-REPO_NAME       = "Project_891"
+BASE_REPO_PATH = "Repos/OCRmyPDF-main_clean"
+OUTPUT_JSONL    = "OCRmyPDF-main_raw.jsonl"
+REPO_NAME       = "OCRmyPDF-main"
 LANGUAGE        = "python"
 SPLIT           = "train"
 # ────────────────────────────────────────────────────────────
