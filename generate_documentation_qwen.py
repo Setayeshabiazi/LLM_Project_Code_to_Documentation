@@ -15,6 +15,197 @@ OUTPUT_MD = "TA-Scheduling-Application-main_clean_documentation.md"
 OLLAMA_API_URL = "https://8apzscny2b8q3e-11434.proxy.runpod.net/api/generate"
 MODEL_NAME = "qwen2.5-coder:7b"
 # ────────────────────────────────────────────────────────────
+#Chain of thought prompt
+#   "You are an expert Python code documentation assistant. "
+#     "Use Purpose-First Chain-of-Thought when generating documentation: "
+#     "1. State the high-level purpose of the function or class. "
+#     "2. Analyze its parameters, behavior, and edge cases. "
+#     "3. Provide a concise Python docstring or summary."
+
+#Chain of thought prompt
+# You are a precise code‑documentation assistant. For the code below, think step by step—first identify its purpose, then list parameters and return values, then draft the docstring.
+#
+# Code:
+# ```python
+# def merge_dicts(a, b):
+#     result = a.copy()
+#     result.update(b)
+#     return result
+#
+
+#Zero Shot prompt
+# You are an expert code‑documentation assistant. For the following code snippet, produce:
+#
+# 1. A one‑sentence summary of what it does.
+# 2. A fully formatted docstring (or code comment) including:
+#    - Purpose
+#    - Arguments (with types)
+#    - Return value (with type)
+#    - Side effects or exceptions (if any)
+#
+# Do **not** show your reasoning—only output the summary and the documentation.
+#
+# Code:
+# ```python
+#
+#
+# class SerialExecutor(Executor):
+#
+#     def _execute(
+#             self,
+#             *,
+#             use_threads: bool,
+#             max_workers: int,
+#             progress_kwargs: dict,
+#             worker_initializer: Callable,
+#             task: Callable,
+#             task_arguments: Iterable,
+#             task_finished: Callable,
+#     ):
+#         with self.pbar_class(**progress_kwargs) as pbar:
+#             for args in task_arguments:
+#                 result = task(*args)
+#                 task_finished(result, pbar)
+
+# Zero Shot prompt
+# You are an expert code‑documentation assistant. For the following code, output:
+# 1. A one‑sentence summary.
+# 2. A complete PEP‑257 docstring (with Args, Returns, Raises).
+#
+# Do not show your reasoning.
+#
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
+
+#Chain of Thought Edge Case Exploration Prompt
+#
+# Analyze potential edge cases for this code (e.g., empty inputs, negative numbers). List them, then generate a robust docstring covering those cases.
+#
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
+
+### Comparative Analysis CoT
+#
+# Compare this implementation to a simpler version (no defaults, no error checking). Note pros/cons in 3 steps. Then produce a full docstring.
+#
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
+
+### Combined Advanced CoT
+#
+# You’re a senior engineer documenting critical code. First:
+# 1. Trace execution on sample inputs.
+# 2. Enumerate edge cases.
+# 3. Compare to a naïve version.
+#
+# Then write a Sphinx‑style docstring covering all insights.
+#
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
+### Function Tracing Prompt
+#
+# Before you document, trace the function’s behavior on sample inputs. Then write the docstring.
+#
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
+## Chain‑of‑Thought
+#
+# You are a meticulous docstring writer. Think step-by-step:
+#
+# 1. Identify purpose.
+# 2. List parameters and types.
+# 3. Determine return and exceptions.
+# 4. Draft the docstring.
+#
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
+
+# Few‑Shot
+#
+# You are a Python documentation generator. Follow the style of the examples:
+#
+# ### Example 1
+# ```python
+# def inc(x):
+#     return x + 1
+# def inc(x: int) -> int:
+#     """
+#     Increment an integer by one.
+#
+#     Args:
+#         x (int): Input integer.
+#     Returns:
+#         int: x plus one.
+#     """
+
+
+
+# Generate a Markdown API reference for this function:
+# - Title
+# - Description
+# - Parameters (with types)
+# - Return type
+# - Example usage
+#
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
+#Produce concise inline `#` comments explaining each block of logic in the code below.
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
+### Combined CoT
+# You’re a senior Python engineer. Do the following:
+# 1. Run a quick manual trace on inputs.
+# 2. Enumerate edge cases.
+# 3. Compare to a simpler variant.
+# 4. Write a comprehensive Google‑style docstring.
+#
+# Code:
+# ```python
+# def get_page_contexts(self) -> Iterator[PageContext]:
+#     npages = len(self.pdfinfo)
+#     for n in range(npages):
+#         yield PageContext(self, n)
+
 
 # Purpose-First Chain-of-Thought system message
 SYSTEM_MSG = """
