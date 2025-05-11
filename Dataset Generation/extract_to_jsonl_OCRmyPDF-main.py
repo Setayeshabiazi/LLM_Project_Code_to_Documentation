@@ -7,7 +7,7 @@ import ast
 import json
 
 #  ─── CONFIGURATION ──────────────────────────────────────────
-BASE_REPO_PATH = "Repos/OCRmyPDF-main_clean"
+BASE_REPO_PATH = "../Repos/OCRmyPDF-main_clean"
 OUTPUT_JSONL    = "OCRmyPDF-main_raw.jsonl"
 REPO_NAME       = "OCRmyPDF-main"
 LANGUAGE        = "python"
