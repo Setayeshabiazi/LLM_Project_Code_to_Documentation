@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f804402-d642-46d5-b75e-3b5abc63a63e" name="Changes" comment="Before Fine tune Result">
+    <list default="true" id="5f804402-d642-46d5-b75e-3b5abc63a63e" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repos/flask" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_documentation_qwen.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_documentation_qwen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +136,7 @@
       <workItem from="1745425910200" duration="13926000" />
       <workItem from="1745530090962" duration="88000" />
       <workItem from="1745713281007" duration="1039000" />
-      <workItem from="1745948777209" duration="6566000" />
+      <workItem from="1745948777209" duration="7333000" />
     </task>
     <task id="LOCAL-00001" summary="Before Fine tune Result">
       <created>1745899394671</created>
@@ -147,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1745899394671</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1746992335593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746992335593</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +187,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Before Fine tune Result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before Fine tune Result" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/code_to_doc$generator.coverage" NAME="generator Coverage Results" MODIFIED="1744301516479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
