@@ -2,7 +2,7 @@ import os
 import ast
 import json
 
-# Change this to your repository directory
+
 REPO_DIR = "/Users/setti/Desktop/CompSci422/code_to_doc/Repos"
 OUTPUT_JSONL = "functions_raw.jsonl"
 

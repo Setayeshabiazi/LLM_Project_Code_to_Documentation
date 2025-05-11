@@ -139,7 +139,6 @@ def save_to_json(structures, filename="structure.json"):
 '''
 if __name__ == "__main__":
     base_repo_dir = "/Users/setti/Desktop/CompSci422/code_to_doc/Repos"
-  # Change to your repo path
     output = extract_all_py_files(base_repo_dir)
     print_structures(output)
-    save_to_markdown(output, filename="structure.md")
+    save_to_markdown(output, filename="docs/structure.md")
