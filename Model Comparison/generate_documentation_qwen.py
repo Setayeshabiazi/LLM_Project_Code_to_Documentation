@@ -10,7 +10,7 @@ import requests
 import time
 
 # ─── CONFIGURATION ──────────────────────────────────────────
-REPO_PATH = "/Users/jiahuiyang/PycharmProjects/LLM_Project_Code_to_Documentation/Repos/TA-Scheduling-Application-main_clean"
+REPO_PATH = "/Repos/TA-Scheduling-Application-main_clean"
 OUTPUT_MD = "TA-Scheduling-Application-main_clean_documentation.md"
 OLLAMA_API_URL = "https://8apzscny2b8q3e-11434.proxy.runpod.net/api/generate"
 MODEL_NAME = "qwen2.5-coder:7b"

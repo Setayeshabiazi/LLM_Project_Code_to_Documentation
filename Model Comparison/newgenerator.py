@@ -133,7 +133,7 @@ def run_comparison_on_random_script():
             documentation=result,
             model_name=model,
             source_file=file_name,
-            output_dir="docs"
+            output_dir="../docs"
         )
 
 

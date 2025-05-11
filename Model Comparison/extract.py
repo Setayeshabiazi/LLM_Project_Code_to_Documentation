@@ -141,4 +141,4 @@ if __name__ == "__main__":
     base_repo_dir = "/Users/setti/Desktop/CompSci422/code_to_doc/Repos"
     output = extract_all_py_files(base_repo_dir)
     print_structures(output)
-    save_to_markdown(output, filename="docs/structure.md")
+    save_to_markdown(output, filename="../docs/structure.md")
