@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Walk the cleaned OCRmyPDF repo and extract every function/class into JSONL.
+Walk the cleaned Project_891 repo and extract every function/class into JSONL.
 """
 import os
 import ast
 import json
 
 #  ─── CONFIGURATION ──────────────────────────────────────────
-BASE_REPO_PATH = "../Repos/OCRmyPDF-main_clean"
-OUTPUT_JSONL    = "OCRmyPDF-main_raw.jsonl"
-REPO_NAME       = "OCRmyPDF-main"
+BASE_REPO_PATH = "../Repos/Project891_clean"
+OUTPUT_JSONL    = "Project891_raw.jsonl"
+REPO_NAME       = "Project891"
 LANGUAGE        = "python"
 SPLIT           = "train"
 # ────────────────────────────────────────────────────────────

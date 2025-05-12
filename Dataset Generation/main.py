@@ -3,8 +3,8 @@
 Master launcher for the Project_891 documentation pipeline.
 This script sequentially invokes:
   1) remove_comments.py
-  2) extract_to_jsonl_OCRmyPDF-main.py
-  3) generate_dataset_OCRmyPDF-main.py
+  2) extract_to_jsonl_REPO.py
+  3) generate_dataset_REPO.py
 
 Usage:
   python run_pipeline.py [--src SRC_DIR] [--clean CLEAN_DIR] [--raw RAW_JSONL] [--out FINAL_JSONL]
